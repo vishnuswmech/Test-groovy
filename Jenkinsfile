@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo docker run -dit centos:8'
+                sh 'sudo docker run -dit centos:latest'
             }
         }
         stage('Test') {
