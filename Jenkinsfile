@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'sudo docker run -dit centos:latest'
+                sh 'kubectl get pods --kubeconfig=/root/kube/admin.conf'
             }
         }
         stage('Test') {
