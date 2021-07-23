@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'cal'
+                sh 'sudo docker run -dit centos:8'
             }
         }
         stage('Test') {
