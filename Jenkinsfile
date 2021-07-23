@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'kubectl get pods'
+                sh 'cal'
             }
         }
         stage('Test') {
