@@ -9,7 +9,16 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+                kubectl('test') {
+                    container('jenkins') {
+                        sh 'kubectl get pods --kubeconfig=/root/kube/admin.conf'
+                    }
+                }
+            }
+        }
+    }
+}
+```
             }
         }
         stage('Deploy') {
